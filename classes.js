@@ -1,4 +1,4 @@
-class Coche{
+class Coche{/** */
     constructor(marca, modelo, anno, km, combustible, precio){
         this.marca = marca;
         this.modelo = modelo;
@@ -55,7 +55,7 @@ class Coche{
                 " ,Precio: "+ this.precio;
     }
 }
-class Persona{
+class Persona{/** */
     constructor(nombre, apellidos, telefono, ciudad){
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -94,7 +94,7 @@ class Persona{
     }
 }
 
-class Promocion extends Coche{
+class Promocion{
     constructor(descuento, fechaFin){
         super();
         this.descuento = descuento;
@@ -220,8 +220,12 @@ class Pedido {
 }
 
 let c1 = new Coche("Seat", "Ibiza", "2016", "120000", "Gasolina", "5000");
+let c2 = new Coche("Mercedes", "GLC", "2019", "0", "Gasolina", "125000");
+let c3 = new Coche("Volkswagen", "Polo", "2018", "0", "Gasolina", "10000");
 
-console.log(c1);
+let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
+let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
 
+let vendedor1 = new Vendedor("")
 
-
+let usuario1 = new Usuario()
