@@ -126,8 +126,9 @@ class Promocion extends Coche{
 
 
 class Vendedor extends Persona{
-    constructor(empresa, coches){
+    constructor(persona, empresa, coches){
         super();
+        this.persona = persona;
         this.empresa = empresa;
         this.coches = coches;
     }
@@ -220,8 +221,20 @@ class Pedido {
 }
 
 let c1 = new Coche("Seat", "Ibiza", "2016", "120000", "Gasolina", "5000");
+let c2 = new Coche("Mercedes", "GLC", "2019", "0", "Gasolina", "125000");
+let c3 = new Coche("Volkswagen", "Polo", "2018", "0", "Gasolina", "10000");
+
+let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
+let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
+
+let promo1 = new Promocion(5000, 16/11/2019);
+
+
+console.log(promo1.obtenerDescuento());
+
 
 console.log(c1);
+console.log(c1.toString());
 
 
 
