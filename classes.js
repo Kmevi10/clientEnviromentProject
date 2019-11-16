@@ -89,6 +89,9 @@ class Persona{
     set setCiudad(ciudad){
         this.ciudad = ciudad;
     }
+    toString(){
+        return "Nombre: " + this.nombre + ", Apellidos: " + this.apellidos + ", Teléfono: " + this.telefono + ", Ciudad: " + this.ciudad;
+    }
 }
 
 class Promocion extends Coche{
@@ -176,7 +179,9 @@ class Usuario extends Vendedor{
     set setEmail(email){
         this.email = email;
     }
-
+    toString(){
+        return "Nombre de usuario: " + this.nombre_usuario + ", Tipo: " + this.tipo + ", Email: " + this.email;
+    }
 }
 
 
