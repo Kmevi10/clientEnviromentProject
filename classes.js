@@ -225,7 +225,20 @@ let c3 = new Coche("Volkswagen", "Polo", "2018", "0", "Gasolina", "10000");
 
 let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
 let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
+let persona3 = new Persona("Jorge", "Te Queremos", "666666666", "Brookling");
 
-let vendedor1 = new Vendedor("")
+let usuario1 = new Usuario("Kmevi32", "tipo acero", "carlos.mesa@adaits.com");
+let usuario2 = new Usuario("iQuiiCks","tipo planta","javier.ruiz@adaits.com");
+let usuario3 = new Usuario("ShuJorgito", "tipo Sprint", "jorge.maquinon@adaits.com");
 
-let usuario1 = new Usuario()
+let promocion1 = new Promocion("20%", "31/12/2019");
+let promocion2 = new Promocion("60%", "01/01/2020");
+let promocion3 = new Promocion("110%", "02/02/2020");
+
+let vendedor1 = new Vendedor("Roberto","Mercedes",["Clase B", "Clase C", "CLG"]);
+let vendedor2 = new Vendedor("Kevin","Audi",["A7", "Q7", "TT"]);
+let vendedor3 = new Vendedor("Jimmy","BMW",["X6", "320D", "420"]);
+
+let pedido1 = new Pedido("Usuario1", "U0001", "15/05/2019", "15000");
+let pedido2 = new Pedido("Usuario2", "U0002", "16/05/2019", "150000");
+let pedido3 = new Pedido("Usuario3", "U0003", "17/05/2019", "37000");
