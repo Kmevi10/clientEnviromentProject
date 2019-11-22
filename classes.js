@@ -1,4 +1,4 @@
-class Coche{/** */
+class Coche{
     constructor(marca, modelo, anno, km, combustible, precio){
         this.marca = marca;
         this.modelo = modelo;
@@ -55,7 +55,7 @@ class Coche{/** */
                 " ,Precio: "+ this.precio;
     }
 }
-class Persona{/** */
+class Persona{
     constructor(nombre, apellidos, telefono, ciudad){
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -94,13 +94,8 @@ class Persona{/** */
     }
 }
 
-<<<<<<< HEAD
-class Promocion{
-    constructor(descuento, fechaFin){
-=======
 class Promocion extends Coche{
     constructor(descuento, fechaFin, coches){
->>>>>>> origin
         super();
         this.descuento = descuento;
         this.fechaFin = fechaFin;
@@ -237,12 +232,6 @@ class Pedido {
 let c1 = new Coche("Seat", "Ibiza", "2016", "120000", "Gasolina", "5000");
 let c2 = new Coche("Mercedes", "GLC", "2019", "0", "Gasolina", "125000");
 let c3 = new Coche("Volkswagen", "Polo", "2018", "0", "Gasolina", "10000");
-<<<<<<< HEAD
-
-let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
-let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
-let persona3 = new Persona("Jorge", "Te Queremos", "666666666", "Brookling");
-=======
 
 let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
 let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
@@ -269,20 +258,3 @@ console.log(promo1.obtenerDescuento());
 
 console.log(c1);
 console.log(c1.toString());
->>>>>>> origin
-
-let usuario1 = new Usuario("Kmevi32", "tipo acero", "carlos.mesa@adaits.com");
-let usuario2 = new Usuario("iQuiiCks","tipo planta","javier.ruiz@adaits.com");
-let usuario3 = new Usuario("ShuJorgito", "tipo Sprint", "jorge.maquinon@adaits.com");
-
-let promocion1 = new Promocion("20%", "31/12/2019");
-let promocion2 = new Promocion("60%", "01/01/2020");
-let promocion3 = new Promocion("110%", "02/02/2020");
-
-let vendedor1 = new Vendedor("Roberto","Mercedes",["Clase B", "Clase C", "CLG"]);
-let vendedor2 = new Vendedor("Kevin","Audi",["A7", "Q7", "TT"]);
-let vendedor3 = new Vendedor("Jimmy","BMW",["X6", "320D", "420"]);
-
-let pedido1 = new Pedido("Usuario1", "U0001", "15/05/2019", "15000");
-let pedido2 = new Pedido("Usuario2", "U0002", "16/05/2019", "150000");
-let pedido3 = new Pedido("Usuario3", "U0003", "17/05/2019", "37000");
