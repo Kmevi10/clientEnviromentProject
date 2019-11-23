@@ -129,36 +129,6 @@ class Promocion extends Coche{
     }
 }
 
-
-
-
-class Vendedor extends Persona{
-    constructor(persona, empresa, coches){
-        super();
-        this.persona = persona;
-        this.empresa = empresa;
-        this.coches = coches;
-    }
-
-    // METODOS GET & SET
-
-    get getEmpresa(){
-        return this.empresa;
-    }
-    get getCoches(){
-        return this.coches;
-    }
-    set setEmpresa(empresa){
-        this.empresa = empresa;
-    }
-    set setCoches(coches){
-        this.coches = coches;
-    }
-    toString(){
-        return "Empresa: "+ this.empresa + " ,Coches"+ this.coches;
-    }
-}
-
 class Usuario {
     constructor(nombre_usuario, tipo, email){
         super();
