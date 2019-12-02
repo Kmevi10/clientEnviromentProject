@@ -7,6 +7,7 @@ class Coche{
         this.combustible = combustible;
         this.precio = precio;
     }
+    votos = 0;
     // GET && SET
     get getMarca(){
         return this.marca;
@@ -25,6 +26,9 @@ class Coche{
     }
     get getPrecio(){
         return this.precio;
+    }
+    get getVotos(){
+        return this.votos;
     }
 
     set setMarca(marca){
@@ -56,12 +60,14 @@ class Coche{
     }
 }
 class Persona{
-    constructor(nombre, apellidos, telefono, ciudad){
+    constructor(nombre, apellidos, telefono, ciudad ){
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.telefono = telefono;
         this.ciudad = ciudad;
+ 
     }
+    listaCochesVotados = []
 
     // METODOS
 
