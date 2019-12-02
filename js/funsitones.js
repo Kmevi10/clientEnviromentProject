@@ -39,7 +39,7 @@ let ordenarPrecio = ordenacion => console.log(ordenacion === "asc" ? a.precio - 
 let ordenarAnno = ordenacion => console.log(ordenacion === "asc" ? a.anno - b.anno : b.anno - a.anno);
 
 /* USUARIO */ 
-let votarCoche = (coche) => coche.votos++;
+let votarCoche = coche => coche.votos++;
 let elementosVotados = usuario => console.log(getListaCochesVotados());
 let elementosSimilares = console.log(listaCoches.filter(x => x.marca === getListaCochesVotados().marca));
 let mostrarUsuarios = () => console.log(listaUsuarios);

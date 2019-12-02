@@ -9,19 +9,40 @@
     <title>COCHES·BÚSQUEDA</title>
 </head>
 <body>
-    <h1>Busca un coche</h1>
+    <h1>Busqueda de coches</h1>
     <div class="funcion">
         <h3>Elemento filtrado por 2 campos.</h3>
         <form action="">
             <label for="marca">Marca:</label>
-            <input type="text" name="marca">
-            <label for=""></label>
-            <input type="text">
-            <input type="text">
+            <input type="text" name="marca" placeholder="seat">
+            <label for="modelo">Modelo:</label>
+            <input type="text" placeholder="ibiza">
+            <input type="submit" value="Buscar">
         </form>
     </div>
-    <p>Función que devuelve un elemento similar a otro.</p>
-    <p>Elementos asociados a un usuario.</p>
-    <p>Una función que encaje en la página.</p>
+    <div class="funcion2">
+        <h3>Función que devuelve un elemento similar a otro.</h3>
+        <form action="">
+            <label for="coche">ID coche:</label>
+            <input type="text" placeholder="1">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+    <div class="funcion3">
+        <h3>Coches asociados al usuario.</h3>
+        <form action="">
+            <label for="coche">ID usuario:</label>
+            <input type="text" placeholder="1">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+    <div class="funcion4">
+        <h3>Filtrado por marca.</h3>
+        <form action="">
+            <label for="marca">Marca:</label>
+            <input type="text" placeholder="BMW">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
 </body>
 </html>
