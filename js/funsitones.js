@@ -23,3 +23,4 @@ let editarCoche = (posicion,marca) => console.log(listaCoches[posicion].setMarca
 let eliminarCoche = posicion => listaCoches.splice(posicion);
 
 let anadirPromocion = (marca,modelo,anno,km,combustible) => console.log(listaCoches.push(new Coche(marca,modelo,anno,km,combustible)));
+.
