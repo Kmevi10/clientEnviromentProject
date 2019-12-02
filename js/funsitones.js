@@ -1,6 +1,5 @@
 /*
 let mostrarCoches = () => console.log(listaCoches);
-<<<<<<< HEAD
 let mostrarUsuarios = () => console.log(listaUsuarios);
 let mostrarPersonas = () => console.log(listaUsuarios);
 let mostrarCochesPromocion = promocion => console.log(promocion);
@@ -13,7 +12,6 @@ let anadirUsuario = (nombre,tipo,email) => console.log(listaUsuarios.push(new Us
 let editarCoche = (posicion,marca) => console.log(listaCoches[posicion].setMarca = marca);
 let eliminarCoche = posicion => listaCoches.splice(posicion);
 let anadirPromocion = (marca,modelo,anno,km,combustible) => console.log(listaCoches.push(new Coche(marca,modelo,anno,km,combustible)));
-=======
 let mostrarPersonas = () => console.log(listaUsuarios);
 let mostrarCochesPromocion = promocion => console.log(promocion);
 let anadirUsuario = (nombre,tipo,email) => console.log(listaUsuarios.push(new Usuario(nombre,tipo,email)));
@@ -45,6 +43,3 @@ let votarCoche = (coche) => coche.votos++;
 let elementosVotados = usuario => console.log(getListaCochesVotados());
 let elementosSimilares = console.log(listaCoches.filter(x => x.marca === getListaCochesVotados().marca));
 let mostrarUsuarios = () => console.log(listaUsuarios);
-
-
->>>>>>> 8c585288bc5119f3b932958d592e7bd34970d00a
