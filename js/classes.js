@@ -6,8 +6,8 @@ class Coche{
         this.km = km;
         this.combustible = combustible;
         this.precio = precio;
+        this.votos = [];
     }
-    votos = 0;
     // GET && SET
     get getMarca(){
         return this.marca;
@@ -137,7 +137,6 @@ class Promocion extends Coche{
 
 class Usuario {
     constructor(nombre_usuario, tipo, email){
-        super();
         this.nombre_usuario = nombre_usuario;
         this.tipo = tipo;
         this.email = email;
@@ -221,16 +220,8 @@ let promocion1 = new Promocion("20%", "31/12/2019", [c1,c2]);
 let promocion2 = new Promocion("60%", "01/01/2020", [c1]);
 let promocion3 = new Promocion("110%", "02/02/2020"[c3,c2]);
 
-let vendedor1 = new Vendedor("Roberto","Mercedes",["Clase B", "Clase C", "CLG"]);
-let vendedor2 = new Vendedor("Kevin","Audi",["A7", "Q7", "TT"]);
-let vendedor3 = new Vendedor("Jimmy","BMW",["X6", "320D", "420"]);
-
 let pedido1 = new Pedido(usuario1, "U0001", "15/05/2019", "15000");
 let pedido2 = new Pedido(usuario2, "U0002", "16/05/2019", "150000");
 let pedido3 = new Pedido(usuario3, "U0003", "17/05/2019", "37000");
 
-console.log(promo1.obtenerDescuento());
-
-
-console.log(c1);
-console.log(c1.toString());
+let listaCoches = [c1, c2, c3];
