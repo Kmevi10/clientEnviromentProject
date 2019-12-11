@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>COCHES·BÚSQUEDA</title>
 </head>
+
 <body>
     <h1>Busqueda de coches</h1>
     <div class="funcion">
@@ -22,30 +24,37 @@
             <div id="divErrorModelo"></div>
             <input id="enviarMarca" type="submit" value="Buscar">
         </form>
+        <div id="mostrarMarcaModelo"></div>
     </div>
     <div class="funcion2">
         <h3>Función que devuelve un elemento similar a otro.</h3>
-        <form action="">
-            <label for="coche">ID coche:</label>
-            <input type="text" placeholder="1">
+        <form id="formulario2" action="">
+            <label for="coche">Marca/modelo del coche:</label>
+            <input id="marcaSimilar" type="text" placeholder="eat">
+            <div id="divErrorMarcaSimilar"></div>
             <input type="submit" value="Buscar">
         </form>
+        <div id="mostrarSimilar"></div>
     </div>
     <div class="funcion3">
         <h3>Coches asociados al usuario.</h3>
-        <form action="">
-            <label for="coche">ID usuario:</label>
-            <input type="text" placeholder="1">
+        <form id="formulario3" action="">
+            <label for="coche">Usuario:</label>
+            <input id="nombreUsuario" type="text" placeholder="Jorgito">
             <input type="submit" value="Buscar">
         </form>
+        <div id="mostrarAsociados"></div>
     </div>
     <div class="funcion4">
         <h3>Filtrado por marca.</h3>
-        <form action="">
+        <form id="formulario4" action="">
             <label for="marca">Marca:</label>
-            <input type="text" placeholder="BMW">
+            <input id="anno" type="text" placeholder="BMW">
+            <div id="divErrorMarca4"></div>
             <input type="submit" value="Buscar">
         </form>
+        <div id="mostrarMarca"></div>
     </div>
 </body>
+
 </html>
