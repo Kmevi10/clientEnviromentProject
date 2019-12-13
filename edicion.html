@@ -4,41 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="js/classes.js"></script>
-    <script src="js/funsitones.js"></script>
+    <script src="js/edicion.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
     <title>COCHES·EDICIÓN</title>
 </head>
 <body>
     <h1>Edición</h1>
     <div class="funcion">
         <h3>Añadir coche.</h3>
-        <form action="">
+        <form action="" id="formularioAnadir">
             <label for="marca">Marca:</label>
-            <input type="text" name="marca" placeholder="seat">
+            <input type="text" name="marca" placeholder="seat" id="marca">
+            <div id="divErrorMarca"></div>
             <label for="modelo">Modelo:</label>
-            <input type="text" name="modelo" placeholder="ibiza">
+            <input type="text" name="modelo" placeholder="ibiza" id="modelo">
+            <div id="divErrorModelo"></div>
             <label for="anno">Año:</label>
-            <input type="text" name="anno" placeholder="2019">
+            <input type="text" name="anno" placeholder="2019" id="anno">
+            <div id="divErrorAnno"></div>
             <label for="km">Kilómetros:</label>
-            <input type="text" name="km" placeholder="10.000">
+            <input type="text" name="km" placeholder="10.000" id="km">
+            <div id="divErrorKm"></div>
             <label for="combustible">Combustible:</label>
-            <input type="text" name="combustible" placeholder="Gasofa">
+            <select name="combustible" id="combustible">
+                <option value="diesel">Diesel</option>
+                <option value="gasolina">Gasolina</option>
+            </select>
+            <div id="divErrorCombustible"></div>
             <input type="submit" value="Buscar">
         </form>
+        <div id="mostrarCocheCreado"></div>
     </div>
     <div class="funcion2">
-        <h3>Editar marca.</h3>
-        <form action="">
-            <label for="coche">ID coche:</label>
-            <input type="text" placeholder="1">
-            <label for="marca">Nueva marca:</label>
-            <input type="text" name="marca" placeholder="Renault">
+        <h3>Editar año.</h3>
+        <form action="" id="formularioEditar">
+            <label for="idCoche">ID coche:</label>
+            <select name="idCoche" id="idCoche">
+                <option value="0">Seat Ibiza</option>
+                <option value="1">Mercedes GLC</option>
+                <option value="2">Volkswagen Polo</option>
+            </select>
+            <label for="anno">Nuevo año:</label>
+            <input type="text" name="anno" placeholder="2019" id="nuevoAnno">
+            <div id="divErrorNuevoAnno"></div>
             <input type="submit" value="Buscar">
         </form>
+        <div id="mostrarNuevoAnno"></div>
     </div>
     <div class="funcion3">
         <h3>Eliminar coche.</h3>
-        <form action="">
+        <form action=" " id="formularioEliminar">
             <label for="coche">ID coche:</label>
             <input type="text" placeholder="1">
             <input type="submit" value="Buscar">
