@@ -136,8 +136,14 @@ $(document).ready(function(){
     $("#formularioEditar").on("submit",function(){
         event.preventDefault();
         validaEditar();
-        
     });
+    console.log(listaCoches)
+    $("#formularioEliminar").on("submit",function(){
+        event.preventDefault();
+        eliminarCoche($("#coche").val())
+        console.log(listaCoches)
+    });
+    
 });
 
 function validaNuevoAnno() {
@@ -180,5 +186,5 @@ function validaEditar(){
 /* EDICION */
 let anadirCoche = (marca, modelo, anno, km, combustible) => listaCoches.push(new Coche(marca, modelo, anno, km, combustible));
 let editarCoche = (posicion, anno) => listaCoches[posicion].setAnno = anno;
-let eliminarCoche = posicion => listaCoches.splice(posicion);
+let eliminarCoche = posicion => listaCoches.splice(posicion,1);
 //Funcion validar Sprint 4
