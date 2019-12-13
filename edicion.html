@@ -34,7 +34,7 @@
                 <option value="gasolina">Gasolina</option>
             </select>
             <div id="divErrorCombustible"></div>
-            <input type="submit" value="Buscar">
+            <input type="submit" value="Crear">
         </form>
         <div id="mostrarCocheCreado"></div>
     </div>
@@ -50,7 +50,7 @@
             <label for="anno">Nuevo año:</label>
             <input type="text" name="anno" placeholder="2019" id="nuevoAnno">
             <div id="divErrorNuevoAnno"></div>
-            <input type="submit" value="Buscar">
+            <input type="submit" value="Editar">
         </form>
         <div id="mostrarNuevoAnno"></div>
     </div>
@@ -58,8 +58,12 @@
         <h3>Eliminar coche.</h3>
         <form action=" " id="formularioEliminar">
             <label for="coche">ID coche:</label>
-            <input type="text" placeholder="1">
-            <input type="submit" value="Buscar">
+            <select name="coche" id="coche">
+                <option value="0">Seat Ibiza</option>
+                <option value="1">Mercedes GLC</option>
+                <option value="2">Volkswagen Polo</option>
+            </select>
+            <input type="submit" value="Eliminar">
         </form>
     </div>
 </body>
