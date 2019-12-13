@@ -8,3 +8,5 @@ let votoCoche = voto => listaUsuarios.filter(x => x.nombre_usuario === $("#usuar
     listaCoches.filter(x => x.modelo === $("#cocheAVotar").val()).length >= 1 ?
     listaVotos.push(new Voto($("#usuarioQueVota").val(), voto, $("#cocheAVotar").val())) :
     $(".divErrorUser").append(`<div>No es posible encontar su usuario o modelo.</div>`);
+
+$(() => $("#voto1").click(event => event.preventDefault() + votoCoche($("#voto1").val())));
