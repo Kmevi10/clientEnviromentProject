@@ -250,3 +250,4 @@ let pedido3 = new Pedido(usuario3, "U0003", "17/05/2019", "37000");
 
 let listaCoches = [c1, c2, c3];
 let listaUsuarios = [usuario1, usuario2, usuario3];
+let listaVotos = [];

@@ -271,5 +271,4 @@ let votarCoche = coche => coche.votos++;
 let elementosVotados = usuario => console.log(getListaCochesVotados());
 let elementosSimilares = () => listaCoches.filter(x => x.marca === getListaCochesVotados().marca);
 let mostrarUsuarios = () => console.log(listaUsuarios);
-SimilarSimilarSimilar
 let div = document.createElement("div");
