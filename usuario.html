@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="js/classes.js"></script>
     <script src="js/funsitones.js"></script>
+    <script src="js/usuario.js"></script>
     <title>COCHES·USUARIO</title>
 </head>
 
@@ -19,9 +21,13 @@
             <input id="usuarioQueVota" type="text" name="user">
             <label for="coche">Escoge un coche:</label>
             <input id="cocheAVotar" type="text" name="coche">
-            <input id="votar" type="submit" value="Me encanta">
-            <input id="votar" type="submit" value="No me gusta">
+            <input type="submit" value="1" id="votoCoche">
+            <input type="submit" value="2" id="votoCoche">
+            <input type="submit" value="3" id="votoCoche">
+            <input type="submit" value="4" id="votoCoche">
+            <input type="submit" value="5" id="votoCoche">
         </form>
+        <div class="divErrorUser"></div>
     </div>
     <div class="funcion2">
         <h3>Mostrar coches votados.</h3>
