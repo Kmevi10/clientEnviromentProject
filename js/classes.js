@@ -206,6 +206,26 @@ class Pedido {
     }
 }
 
+class Voto {
+    constructor(usuario, puntuacion, coche) {
+        this.usuario = usuario;
+        this.puntuacion = puntuacion;
+        this.coche = coche;
+    }
+
+    // METODOS
+
+    get getPuntuacion() {
+        return this.puntuacion;
+    }
+    set setPuntuacion(puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+    toString() {
+        return "Usuario: " + this.usuario + "\nPuntuación: " + this.puntuacion + "\nCoche:" + this.coche;
+    }
+}
+
 
 //CREAMOSLOS OBJETOS
 let c1 = new Coche("Seat", "Ibiza", "2016", "120000", "Gasolina", "5000");
