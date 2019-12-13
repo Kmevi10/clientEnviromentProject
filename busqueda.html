@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/classes.js"></script>
     <script src="js/funsitones.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>COCHES·BÚSQUEDA</title>
 </head>
+
 <body>
-    <h1>Busca un coche</h1>
+    <h1>Busqueda de coches</h1>
     <div class="funcion">
         <h3>Elemento filtrado por 2 campos.</h3>
-        <form action="">
+        <form id="formBuscarMarca" action="">
             <label for="marca">Marca:</label>
-            <input type="text" name="marca">
-            <label for=""></label>
-            <input type="text">
-            <input type="text">
+            <input id="marca" type="text" name="marca" placeholder="seat"><br>
+            <div id="divErrorMarca"></div>
+            <label for="modelo">Modelo:</label>
+            <input id="modelo" type="text" placeholder="ibiza"><br>
+            <div id="divErrorModelo"></div>
+            <input id="enviarMarca" type="submit" value="Buscar">
         </form>
+        <div id="mostrarMarcaModelo"></div>
     </div>
-    <p>Función que devuelve un elemento similar a otro.</p>
-    <p>Elementos asociados a un usuario.</p>
-    <p>Una función que encaje en la página.</p>
+    <div class="funcion2">
+        <h3>Función que devuelve un elemento similar a otro.</h3>
+        <form id="formulario2" action="">
+            <label for="coche">Marca/modelo del coche:</label>
+            <input id="marcaSimilar" type="text" placeholder="eat">
+            <div id="divErrorMarcaSimilar"></div>
+            <input type="submit" value="Buscar">
+        </form>
+        <div id="mostrarSimilar"></div>
+    </div>
+    <div class="funcion3">
+        <h3>Coches asociados al usuario.</h3>
+        <form id="formulario3" action="">
+            <label for="coche">Usuario:</label>
+            <input id="nombreUsuario" type="text" placeholder="Jorgito">
+            <input type="submit" value="Buscar">
+        </form>
+        <div id="mostrarAsociados"></div>
+    </div>
+    <div class="funcion4">
+        <h3>Filtrado por marca.</h3>
+        <form id="formulario4" action="">
+            <label for="marca">Marca:</label>
+            <input id="anno" type="text" placeholder="BMW">
+            <div id="divErrorMarca4"></div>
+            <input type="submit" value="Buscar">
+        </form>
+        <div id="mostrarMarca"></div>
+    </div>
 </body>
+
 </html>

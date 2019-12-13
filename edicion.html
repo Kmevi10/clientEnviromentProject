@@ -10,20 +10,39 @@
 </head>
 <body>
     <h1>Edición</h1>
-    <div class="funcion1">
-        <p>Función que cree o edite el elemento principal de la página.</p>
+    <div class="funcion">
+        <h3>Añadir coche.</h3>
+        <form action="">
+            <label for="marca">Marca:</label>
+            <input type="text" name="marca" placeholder="seat">
+            <label for="modelo">Modelo:</label>
+            <input type="text" name="modelo" placeholder="ibiza">
+            <label for="anno">Año:</label>
+            <input type="text" name="anno" placeholder="2019">
+            <label for="km">Kilómetros:</label>
+            <input type="text" name="km" placeholder="10.000">
+            <label for="combustible">Combustible:</label>
+            <input type="text" name="combustible" placeholder="Gasofa">
+            <input type="submit" value="Buscar">
+        </form>
     </div>
     <div class="funcion2">
-        <p>Validar los campos.</p>
-        <label for=""></label>
-        <input type="text">
-        <input type="submit">
+        <h3>Editar marca.</h3>
+        <form action="">
+            <label for="coche">ID coche:</label>
+            <input type="text" placeholder="1">
+            <label for="marca">Nueva marca:</label>
+            <input type="text" name="marca" placeholder="Renault">
+            <input type="submit" value="Buscar">
+        </form>
     </div>
     <div class="funcion3">
-        <p>Añadir o modificar un elemento.</p>
-    </div>
-    <div class="funcion4">
-        <p>Una función que encaje en la página.</p>
+        <h3>Eliminar coche.</h3>
+        <form action="">
+            <label for="coche">ID coche:</label>
+            <input type="text" placeholder="1">
+            <input type="submit" value="Buscar">
+        </form>
     </div>
 </body>
 </html>
