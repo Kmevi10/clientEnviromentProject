@@ -1,0 +1,2 @@
+$(() => $("#votarCoche").submit(() => listaUsuarios.filter(x => x.nombre_usuario === $("#user").val).length === 1 && listaCoches.filter(x => x.modelo === $("#coche").val).length === 1 ? listaVotos.push(new Voto($("#user").val, $("#votoCoche").val, $("#coche").val)) : $("divErrorUser").append("<div>No es posible encontara su usuario.</div>")));
+console.log(listaVotos);
