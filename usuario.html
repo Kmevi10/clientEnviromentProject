@@ -21,12 +21,9 @@
 <body>
     <h1>Usuario.</h1>
     <div class="funcion">
+        <input type="text" name="" id="nombreUser" placeholder="Nombre de usuario">
         <h3>Votar coche.</h3>
         <form id="votarCoche" action="">
-            <div class="contentResp">
-                <label for="user">¿Quien eres?</label>
-                <input id="usuarioQueVota" type="text" name="user">
-            </div>
             <div class="contentResp">
                 <label for="coche">¿Qué modelo quieres valorar?</label>
                 <input id="cocheAVotar" type="text" name="coche">
@@ -39,32 +36,24 @@
                 <input type="submit" value="5" id="voto5">
             </div>
         </form>
-        <div class="divErrorUser"></div>
+        <div id="divErrorVotos"></div>
     </div>
     <div class="funcion2">
         <h3>Mostrar coches votados.</h3>
         <form id="mostrarVotados" action="">
-            <div class="contentResp">
-                <label>¿Quién eres?</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario">
-            </div>
-            <input id="votados" type="submit" value="BUS-CAR mis cuadriciclillos">
+            <input id="votados" type="submit" value="Mis votos">
         </form>
         <div id="mostrarCochesVotados"></div>
     </div>
     <div class="funcion3">
         <h3>Mostrar elementos similares.</h3>
         <form action="">
-            <input type="submit" value="BUS-CAR similares a mis cuadriciclillos favoritos">
+            <input type="submit" value="Coches similares a mis favoritos">
         </form>
     </div>
     <div class="funcion4">
         <h3>Mostrar usuario.</h3>
         <form action="">
-            <div class="contentResp">
-                <label for="">Nombre de usuario</label>
-                <input type="text" name="" id="nombreUser">
-            </div>
             <input id="datos" type="submit" value="Mis datos">
         </form>
         <div id="divMostrardatos"></div>

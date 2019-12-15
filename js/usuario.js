@@ -14,10 +14,14 @@ $(() => $("#voto3").mouseover(() => cambioColor(3)));
 $(() => $("#voto4").mouseover(() => cambioColor(4)));
 $(() => $("#voto5").mouseover(() => cambioColor(5)));
 
-let votoCoche = voto => $(".divErrorUser").empty() + listaUsuarios.filter(x => x.nombre_usuario === $("#usuarioQueVota").val()).length === 1 &&
-    listaCoches.filter(x => x.modelo === $("#cocheAVotar").val()).length >= 1 ?
-    listaVotos.push(new Voto($("#usuarioQueVota").val(), voto, $("#cocheAVotar").val())) :
-    $(".divErrorUser").append(`<div>No es posible encontar su usuario o modelo.</div>`) + alert("primero: " + (listaUsuarios.filter(x => x.nombre_usuario === $("#usuarioQueVota").val()).length === 1).text + "\nSegundo: " + (listaCoches.filter(x => x.modelo === $("#cocheAVotar").val()).length >= 1).text);
+let votoCoche = voto => {
+    $("#divErrorVotos").empty();
+    let user = listaUsuarios.filter(x => x.nombre_usuario === $("#nombreUser").val())[0];
+    let coche = listaCoches.filter(x => x.modelo === $("#cocheAVotar").val())[0];
+    user !== undefined && coche != undefined ?
+        listaVotos.push(new Voto(user, voto, coche)) :
+        $("#divErrorVotos").append(`<div>No es posible encontar su usuario o modelo.</div>`);
+};
 
 let cambioColor = num => {
     let inputs = [$("#voto1"), $("#voto2"), $("#voto3"), $("#voto4"), $("#voto5")];
@@ -26,10 +30,9 @@ let cambioColor = num => {
 }
 
 $(() => $("#votados").click(event => {
-    let correcto = false;
     event.preventDefault();
     $("#mostrarCochesVotados").empty();
-    let listadoCochesVotados = listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUsuario").val()).coche.sort((a, b) => a.localeCompare(b));
+    let listadoCochesVotados = listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val()).coche.sort((a, b) => a.localeCompare(b));
     $("#mostrarCochesVotados").append("<div>Hola</div>")
     correcto ? $("#mostrarCochesVotados").append("<div>No tiene coches favoritos.</div>") : false;
 }));
