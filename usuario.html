@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="js/classes.js"></script>
     <script src="js/funsitones.js"></script>
     <script src="js/usuario.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>COCHES·USUARIO</title>
 </head>
 
@@ -17,23 +23,34 @@
     <div class="funcion">
         <h3>Votar coche.</h3>
         <form id="votarCoche" action="">
-            <label for="user">¿Quien eres?</label>
-            <input id="usuarioQueVota" type="text" name="user">
-            <label for="coche">Escoge un coche:</label>
-            <input id="cocheAVotar" type="text" name="coche">
-            <input type="submit" value="1" id="voto1">
-            <input type="submit" value="2" id="voto2">
-            <input type="submit" value="3" id="voto3">
-            <input type="submit" value="4" id="voto4">
-            <input type="submit" value="5" id="voto5">
+            <div class="contentResp">
+                <label for="user">¿Quien eres?</label>
+                <input id="usuarioQueVota" type="text" name="user">
+            </div>
+            <div class="contentResp">
+                <label for="coche">¿Qué modelo quieres valorar?</label>
+                <input id="cocheAVotar" type="text" name="coche">
+            </div>
+            <div id="submits">
+                <input type="submit" value="1" id="voto1">
+                <input type="submit" value="2" id="voto2">
+                <input type="submit" value="3" id="voto3">
+                <input type="submit" value="4" id="voto4">
+                <input type="submit" value="5" id="voto5">
+            </div>
         </form>
         <div class="divErrorUser"></div>
     </div>
     <div class="funcion2">
         <h3>Mostrar coches votados.</h3>
-        <form action="">
-            <input type="submit" value="BUS-CAR mis cuadriciclillos">
+        <form id="mostrarVotados" action="">
+            <div class="contentResp">
+                <label>¿Quién eres?</label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario">
+            </div>
+            <input id="votados" type="submit" value="BUS-CAR mis cuadriciclillos">
         </form>
+        <div id="mostrarCochesVotados"></div>
     </div>
     <div class="funcion3">
         <h3>Mostrar elementos similares.</h3>
