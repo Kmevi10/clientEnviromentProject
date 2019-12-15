@@ -39,12 +39,16 @@ $(() => $("#votados").click(event => {
 
 $(() => $("#similares").click(event => {
     event.preventDefault();
+    let correcto = false;
+    $("#divMostrar").empty();
     for (let elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val())) {
         let mostrar = listaCoches.filter(x => x.marca === elemento.coche.marca);
         for (let coche of mostrar) {
             $("#divMostrar").append(`<div>${coche.marca} modelo ${coche.modelo}</div>`);
+            correcto = true;
         }
     }
+    !correcto ? $("#divMostrar").append(`<div>No has votado ningún coche.</div>`) : false;
 }));
 
 $(() => $("#datos").click(event => {
