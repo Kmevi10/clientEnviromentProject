@@ -18,9 +18,7 @@ let votoCoche = voto => {
     $("#divErrorVotos").empty();
     let user = listaUsuarios.filter(x => x.nombre_usuario === $("#nombreUser").val())[0];
     let coche = listaCoches.filter(x => x.modelo === $("#cocheAVotar").val())[0];
-    user !== undefined && coche != undefined ?
-        listaVotos.push(new Voto(user, voto, coche)) :
-        $("#divErrorVotos").append(`<div>No es posible encontar su usuario o modelo.</div>`);
+    user !== undefined && coche != undefined ? listaVotos.push(new Voto(user, voto, coche)) : $("#divErrorVotos").append(`<div>No es posible encontar su usuario o modelo.</div>`);
 };
 
 let cambioColor = num => {
@@ -30,11 +28,13 @@ let cambioColor = num => {
 }
 
 $(() => $("#votados").click(event => {
+    let correcto = false;
     event.preventDefault();
     $("#mostrarCochesVotados").empty();
-    let listadoCochesVotados = listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val()).coche.sort((a, b) => a.localeCompare(b));
-    $("#mostrarCochesVotados").append("<div>Hola</div>")
-    correcto ? $("#mostrarCochesVotados").append("<div>No tiene coches favoritos.</div>") : false;
+    for (const elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val())) {
+        correcto = true;
+        $("#mostrarCochesVotados").append(`<div><b>Marca</b> ${elemento.coche.marca} <b>modelo</b> ${elemento.coche.modelo} con <b>${elemento.puntuacion} estrellas</b>.</div>`);
+    }!correcto ? $("#mostrarCochesVotados").append(`<div>No has votado ningún coche.</div>`) : false;
 }));
 
 $(() => $("#similares").click(() => {
