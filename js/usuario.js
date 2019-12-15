@@ -23,7 +23,7 @@ let votoCoche = voto => {
 
 let cambioColor = num => {
     let inputs = [$("#voto1"), $("#voto2"), $("#voto3"), $("#voto4"), $("#voto5")];
-    for (const voto of inputs) { voto.removeClass() }
+    for (let voto of inputs) { voto.removeClass() }
     for (let i = 0; i < num; i++) { inputs[i].addClass("overStar") }
 }
 
@@ -31,17 +31,18 @@ $(() => $("#votados").click(event => {
     let correcto = false;
     event.preventDefault();
     $("#mostrarCochesVotados").empty();
-    for (const elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val())) {
+    for (let elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val())) {
         correcto = true;
         $("#mostrarCochesVotados").append(`<div><b>Marca</b> ${elemento.coche.marca} <b>modelo</b> ${elemento.coche.modelo} con <b>${elemento.puntuacion} estrellas</b>.</div>`);
     }!correcto ? $("#mostrarCochesVotados").append(`<div>No has votado ningún coche.</div>`) : false;
 }));
 
-$(() => $("#similares").click(() => {
-    for (const elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#userSimilar").val())) {
+$(() => $("#similares").click(event => {
+    event.preventDefault();
+    for (let elemento of listaVotos.filter(x => x.usuario.nombre_usuario === $("#nombreUser").val())) {
         let mostrar = listaCoches.filter(x => x.marca === elemento.coche.marca);
-        for (const coche of mostrar) {
-            $("divMostrar").append(`<div>${coche.marca} modelo ${coche.modelo}</div>`);
+        for (let coche of mostrar) {
+            $("#divMostrar").append(`<div>${coche.marca} modelo ${coche.modelo}</div>`);
         }
     }
 }));
