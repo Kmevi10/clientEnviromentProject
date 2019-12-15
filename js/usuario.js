@@ -48,6 +48,7 @@ $(() => $("#similares").click(() => {
 
 $(() => $("#datos").click(event => {
     event.preventDefault();
+    $("#divMostrardatos").empty();
     let user = listaUsuarios.find(x => x.nombre_usuario === $("#nombreUser").val());
     $("#divMostrardatos").append(`<div><b>Nombre:</b> ${user.nombre_usuario}</div>`);
     $("#divMostrardatos").append(`<div><b>Tipo:</b> ${user.tipo}</div>`);
