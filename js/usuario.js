@@ -43,9 +43,10 @@ $(() => $("#similares").click(() => {
     }
 }));
 
-$(() => $("#datos").click(() => {
-    let user = listaUsuarios.filter(x => x.nombre_usuario === $("#nombreUser"));
-    $("divMostrardatos").append(`<div><b>Nombre:</b> ${user.nombre_usuario}</div>`);
-    $("divMostrardatos").append(`<div><b>Tipo:</b> ${user.tipo}</div>`);
-    $("divMostrardatos").append(`<div><b>Email:</b> ${user.email}</div>`);
+$(() => $("#datos").click(event => {
+    event.preventDefault();
+    let user = listaUsuarios.find(x => x.nombre_usuario === $("#nombreUser").val());
+    $("#divMostrardatos").append(`<div><b>Nombre:</b> ${user.nombre_usuario}</div>`);
+    $("#divMostrardatos").append(`<div><b>Tipo:</b> ${user.tipo}</div>`);
+    $("#divMostrardatos").append(`<div><b>Email:</b> ${user.email}</div>`);
 }));
