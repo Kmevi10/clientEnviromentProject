@@ -236,9 +236,9 @@ let persona1 = new Persona("Javi", "Ruiz Anaya", "654987321", "Sevilla");
 let persona2 = new Persona("Carlos", "Mesa Viera", "654987321", "Murcia");
 let persona3 = new Persona("Jorge", "Te Queremos", "666666666", "Brookling");
 
-let usuario1 = new Usuario("Kmevi32", "tipo acero", "carlos.mesa@adaits.com", [c1, c2]);
-let usuario2 = new Usuario("iQuiiCks", "tipo planta", "javier.ruiz@adaits.com", [c1]);
-let usuario3 = new Usuario("ShuJorgito", "tipo Sprint", "jorge.maquinon@adaits.com", [c3, c2]);
+let usuario1 = new Usuario("Carlos", "tipo acero", "carlos.mesa@adaits.com", [c1, c2]);
+let usuario2 = new Usuario("Javi", "tipo planta", "javier.ruiz@adaits.com", [c1]);
+let usuario3 = new Usuario("Jorge", "tipo Sprint", "jorge.maquinon@adaits.com", [c3, c2]);
 
 let promocion1 = new Promocion("20%", "31/12/2019", [c1, c2]);
 let promocion2 = new Promocion("60%", "01/01/2020", [c1]);

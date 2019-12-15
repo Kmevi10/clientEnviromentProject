@@ -46,9 +46,9 @@ function cochemejorValorado(event) {
 
     let coches = mejorValorado();
     let div = document.createElement("div");
-    for (let coche of coches) {
-        div.innerHTML += "<br><b>Marca:</b> " + coche.marca + " <b>Modelo:</b> " + coche.modelo + " <b>Precio:</b> " + coche.precio + "€";
-    }
+   
+        div.innerHTML += "<br><b>Marca:</b> " + coches.marca + " <b>Modelo:</b> " + coches.modelo + " <b>Precio:</b> " + coches.precio + "€";
+    
     mostrar.appendChild(div);
 }
 
@@ -89,6 +89,6 @@ function cocheOrdenarAnno(event) {
 
 /* GESTION */
 let obtenerElementos = () => listaCoches.filter(x => x.marca === "Seat").sort((a, b) => a.precio - b.precio);
-let mejorValorado = () => listaCoches.filter(x => x.anno === "2019").sort((a, b) => a.votos - b.votos)[0];
+let mejorValorado = () => listaVotos.find(x => x.puntuacion === 5).coche;
 let ordenarPrecio = () => listaCoches.filter(x => x.precio).sort((a, b) => a.precio - b.precio);
 let ordenarAnno = () => listaCoches.filter(x => x.anno).sort((a, b) => a.anno - b.anno);
